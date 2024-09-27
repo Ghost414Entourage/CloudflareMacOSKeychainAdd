@@ -1,0 +1,39 @@
+#!/bin/bash
+
+# Function to download a certificate
+download_certificate() {
+    local url=$1
+    local file_name=$2
+
+    echo "Downloading $file_name certificate..."
+    curl -O "$url"
+    
+    if [[ $? -ne 0 ]]; then
+        echo "Error downloading $file_name certificate."
+        exit 1
+    fi
+}
+
+# Function to add a certificate to the Keychain
+add_to_keychain() {
+    local file_name=$1
+
+    echo "Adding $file_name certificate to Keychain..."
+    sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain "$file_name"
+    
+    if [[ $? -ne 0 ]]; then
+        echo "Error adding $file_name certificate to Keychain."
+        exit 1
+    fi
+}
+
+# Download and add PEM certificate
+download_certificate "https://developers.cloudflare.com/cloudflare-one/static/Cloudflare_CA.pem" "Cloudflare_CA.pem"
+add_to_keychain "Cloudflare_CA.pem"
+
+# Download and add CRT certificate
+download_certificate "https://developers.cloudflare.com/cloudflare-one/static/Cloudflare_CA.crt" "Cloudflare_CA.crt"
+add_to_keychain "Cloudflare_CA.crt"
+
+echo "Certificates added successfully!"
+
