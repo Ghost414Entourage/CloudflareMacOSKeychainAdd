@@ -6,7 +6,7 @@ sudo chmod +x CloudFlareCertificate
 
 sudo ./CloudFlareCertificate 
 
-Open the app with info, click the logo, use command v, this will paste whatever logo you want to the app. 
+Open the file with info, click the logo, use command v, this will paste whatever logo you want to the script. 
 
 
 
