@@ -1,4 +1,4 @@
-![DALL·E 2024-09-27 03 37 45 - An artistic interpretation of the Cloudflare logo with a dripping slime effect  The orange cloud and sun rays are distorted as if melting into gooey,  Medium](https://github.com/user-attachments/assets/9a6ee434-9129-4c10-96fc-7c2214b5c82e)
+![DALL·E 2024-09-27 03 37 45 - An artistic interpretation of the Cloudflare logo with a dripping slime effect  The orange cloud and sun rays are distorted as if melting into gooey,  Medium Small](https://github.com/user-attachments/assets/d1830076-cf47-4091-b08b-f67b99cc45b0)
 
 
 
